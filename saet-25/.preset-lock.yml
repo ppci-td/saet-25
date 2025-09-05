@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://rsalesc.github.io/rbx/schemas/PresetLock.json
+
+name: default
+assets:
+- path: .gitignore
+  hash: aa294bae18b587e939ce222869a8c128890ceec9
+- path: statement/icpc.sty
+  hash: 12d3eea9690d8f544ee89e01f8afc2e31df0b753
+  symlink_info:
+    target: ../.local.rbx/shared/icpc.sty
+    is_broken: false
+    is_outside: false
+- path: statement/template.rbx.tex
+  hash: effabca4c218adbb721fff8fdbbfd206432da100
+  symlink_info:
+    target: ../.local.rbx/shared/contest_template.rbx.tex
+    is_broken: false
+    is_outside: false
+- path: statement/contest.rbx.tex
+  hash: 51e473f22c6e47e13df1f524a95e951daf7ee7bf
+  symlink_info:
+    target: ../.local.rbx/contest/statement/contest.rbx.tex
+    is_broken: false
+    is_outside: false
