@@ -20,14 +20,10 @@ int main() {
     }
     ll tot = 0;
     for (ll i=0;i<(1<<m);i++)
-        for (ll j=i+1;j<(1<<m);j++)
+        for (ll j=0;j<(1<<m);j++)
             if ( (i|j) == ((1<<m)-1) )
                 tot += qnts[i]*qnts[j];
 
-    // corner case: bm = (1<<m)-1
-    ll brabos = qnts[(1<<m)-1];
-    tot += (brabos*(brabos-1))/2ll;
-
-    printf("%lld\n",tot);
+    printf("%lld\n",tot/2ll);
     return 0;
 }

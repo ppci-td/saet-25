@@ -1,0 +1,45 @@
+%- block legend
+A \textit{Respiração do Trovão} é uma técnica de luta milenar usada em combate
+por grandes guerreiros. Existem $F$ \textit{formas} diferentes de usar a técnica. Cada
+forma exige muito para ser dominada; por isso, alguns guerreiros
+podem dominar apenas algumas das formas, enquanto não dominem outras.
+
+O Vovô é um grande mestre da Respiração do Trovão, e tem hoje $N$ discipulos sob
+seu treinamento. O Vovô sabe quais formas cada discipulo seu domina, e agora quer escolher dois de seus discipulos para criar a dupla perfeita. Uma dupla é perfeita se cada forma da Respiração do Trovão é dominada por
+pelo menos um discipulo da dupla.
+
+De quantas maneiras o vovô pode escolher dois discipulos para criar a dupla
+perfeita?
+
+%- endblock
+
+%- block input
+A primeira linha contém dois inteiros $N$ e $F$ ($\VAR{vars.N.min} \leq N \leq
+\VAR{vars.N.max |sci}, \VAR{vars.F.min} \leq F \leq \VAR{vars.F.max}$),
+o número de discipulos e de formas da técnica, respectivamente.
+Os discipulos são numerados de $1$ a $N$, e as formas são numeradas de $1$ a
+$F$.
+
+As próximas $N$ linhas contém $F$ caracteres cada. O $j$-ésimo caracter da
+$i-$ésima linha é \texttt{S} se o discupulo $i$ domina a forma $j$, ou
+\textttt{N} se não domina.
+
+%- endblock
+
+%- block output
+Imprima uma linha com o número de maneiras de escolher dois discipulos para
+formar a dupla perfeita.
+%- endblock
+
+%- block notes
+No primeiro exemplo, a única dupla que pode ser formada é a dos discipulos
+$\{1,2\}$.
+
+No segundo exemplo, as possiveis duplas são
+$\{1,2\}$, $\{1,4\}$, $\{2,3\}$ e $\{2,4\}$.
+
+%- endblock
+
+%- block editorial
+This is the editorial.
+%- endblock

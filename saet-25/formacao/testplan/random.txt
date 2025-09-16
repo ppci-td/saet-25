@@ -1,2 +1,16 @@
-gens/gen 123456
-gens/gen 12345678
+gens/tudosim 2 10 3485776
+gens/tudosim 10 10 4256
+gens/tudosim 100 10 37465
+gens/tudosim 1000 10 38967
+gens/tudosim 10000 10 89643
+gens/tudosim 100000 10 1290375
+gens/rand 5 7 23425
+gens/rand 2 10 8795
+gens/rand 2 1 23445
+gens/rand 100000 10 2342
+gens/rand 100000 10 65764
+gens/rand 99996 9 6576412
+gens/rand 39482 5 2835
+gens/rand 38720 9 945868376
+gens/rand 28731 3 23847
+gens/rand 341 4 9485639

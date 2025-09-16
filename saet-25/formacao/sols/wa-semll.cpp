@@ -1,33 +1,32 @@
 #include <bits/stdc++.h>
-#define ll long long int
 using namespace std;
 
-ll n, m;
+int n, m;
 char s[12];
-ll qnts[(1<<10)];
+int qnts[(1<<10)];
 
 int main() {
 
     memset(qnts,0,sizeof(qnts));
-    scanf("%lld %lld",&n,&m);
-    for (ll i=0;i<n;i++) {
+    scanf("%d %d",&n,&m);
+    for (int i=0;i<n;i++) {
         scanf("%s",s);
-        ll mbm=0;
-        for (ll j=0;j<m;j++)
+        int mbm=0;
+        for (int j=0;j<m;j++)
             if (s[j]=='S')
                 mbm|=(1<<j);
         qnts[mbm]++;
     }
-    ll tot = 0;
-    for (ll i=0;i<(1<<m);i++)
-        for (ll j=i+1;j<(1<<m);j++)
+    int tot = 0;
+    for (int i=0;i<(1<<m);i++)
+        for (int j=i+1;j<(1<<m);j++)
             if ( (i|j) == ((1<<m)-1) )
                 tot += qnts[i]*qnts[j];
 
     // corner case: bm = (1<<m)-1
-    ll brabos = qnts[(1<<m)-1];
+    int brabos = qnts[(1<<m)-1];
     tot += (brabos*(brabos-1))/2ll;
 
-    printf("%lld\n",tot);
+    printf("%d\n",tot);
     return 0;
 }

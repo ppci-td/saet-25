@@ -6,7 +6,7 @@ int n, m;
 char s[100010][12];
 
 inline bool match(int a, int b) {
-    for (int i=0;i<m;i++)
+    for (int i=m-1;i>=0;i--)
         if (s[a][i]=='N' and s[b][i]=='N')
             return false;
     return true;
