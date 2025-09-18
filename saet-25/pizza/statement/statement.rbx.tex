@@ -34,5 +34,34 @@ A figura abaixo representa o primeiro exemplo de entrada:
 %- endblock
 
 %- block editorial
-This is the editorial.
+Primeiramente, faremos $X=|X|$ e $Y=|Y|$ de forma a colocar o ponto $P$ no
+primeiro quadrante do círculo. Por simetria isto não altera a resposta, e nos
+permite considerar apenas o caso em que $P$ está no primeiro quadrante.
+
+Cada área pode então ser calculada separadamente, de maneira analítica:
+
+\begin{center}
+\begin{multicols}{2}
+\includegraphics[scale=1.2]{A1.png}\\
+Área = $\angle OAB + \vartriangle ACO + \vartriangle OBD + \square OCPD$\\
+
+\includegraphics[scale=1.2]{A2.png}\\
+Área = $\angle OAB + \vartriangle BCP - \vartriangle OAC$\\
+\end{multicols}
+\begin{multicols}{2}
+\includegraphics[scale=1.2]{A3.png}\\
+Área = $\angle OAB - \vartriangle OAP - \vartriangle OBC$\\
+
+\includegraphics[scale=1.2]{A4.png}\\
+Área = $\angle OAB + \vartriangle BCP - \vartriangle ACD$\\
+\end{multicols}
+\end{center}
+
+Alternativamente, quando três das quatro áreas são calculadas, a quarta pode ser
+dada pela subtração da área total ($\pi R^2$) das demais áreas.
+
+Lembre de sempre levar consigo uma boa implementação de funções da geometria!
+
+Complexidade: $O(1)$
+
 %- endblock

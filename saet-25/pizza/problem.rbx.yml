@@ -64,7 +64,7 @@ unitTests:
 # and in the statement.
 vars:
   # Author name to be displayed in the editorial.
-  author: John Doe
+  author: Ricardo Oliveira
   # Constraints of the problem.
   R:
     min: 1
