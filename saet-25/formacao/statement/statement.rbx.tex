@@ -41,5 +41,43 @@ $\{1,2\}$, $\{1,4\}$, $\{2,3\}$ e $\{2,4\}$.
 %- endblock
 
 %- block editorial
-This is the editorial.
+Uma solução direta seria iterar em todos os $O(N^2)$ pares de discípulos e
+verificar, em $O(F)$, se cada par domina ao menos uma forma em, totalizando $O(N^2 \times F)$.
+Entretanto, esta solução não é rápida o bastante para os limites dados no problema.
+
+Para reduzir a complexidade, note que é possível converter a string dada para
+cada discípulo em um \textit{bitmask} de $F$ bits: um inteiro onde o $i-$ésimo
+bit de sua representação binária é 1 se o $i-$ésimo caractere é \texttt{S}, ou 0
+se é \texttt{N}. Como $F \leq 10$, este inteiro será no máximo $2^{10} - 1 =
+1023$, que pode ser armazenado em uma variável \texttt{int}. Esta conversão
+é feita em $O(F)$ para cada discípulo, totalizando $O(NF)$.
+
+Seja $bm_i$ o \textit{bitmask} do discípulo $i$. Para testar em $O(1)$ se os discípulos
+$i$ e $j$ podem ser uma dupla, basta verificar se $bm_i | bm_j = 2^F-1$ (pois
+        $|$ é o operador \textit{ou} bit-a-bit, e
+        $2^F-1$ é o \textit{bitmask} com todos os bits em 1). Assim, a
+complexidade cai para $O(N^2)$. Entretanto, esta complexidade ainda não é rápida
+o bastante.
+
+Note que há no máximo $2^F$ \textit{bitmasks} possíveis, que é no máximo $2^{10} =
+1024$ para os limites do problema!
+
+Pré-compute $Q[bm]$, a quantidade de discípulos cuja \textit{bitmask} é $bm$.
+Note que, para cada par de \textit{bitmasks} $bm_A$ e $bm_B$ com $bm_A \neq
+bm_B$ onde $bm_A | bm_B = 2^F - 1$,
+há $Q[bm_A] \times Q[bm_B]$ duplas possíveis de serem formadas.
+Assim, itere entre os $O((2^F)^2)$ pares de \textit{bitmasks} distintas
+e incremente a resposta em $Q(bm_A) \times Q(bm_B)$ para cada par possível.
+
+Há um \textit{corner case}, que é considerar quando $bm_A$ e $bm_B$ são a mesma
+\textit{bitmask}. Note que o único caso em que é possível formar duplas com uma
+\textit{bitmask} e ela mesma é a \textit{bitmask} $2^F-1$ (discípulos que
+        dominam todas as técnicas). Para contar este caso, incremente a resposta
+em $(Q[2^F-1] \times (Q[2^F-1] - 1))/2$, o número de duplas que podem ser formadas
+entre eles.
+
+A resposta pode não caber em um inteiro de 32 bits. Use \textit{long long}.
+
+Complexidade total: $O(NF + (2^F)^2)$.
+
 %- endblock
