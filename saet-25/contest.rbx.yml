@@ -40,6 +40,8 @@ vars:
   year: 2025
   date: '2025-06-21'
 problems:
+- short_name: A
+  path: parenteses
 - short_name: C
   path: van
 - short_name: D

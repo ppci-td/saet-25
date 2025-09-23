@@ -1,0 +1,48 @@
+%- block legend
+Uma \textit{string} de abre e fecha parênteses está \textit{bem balanceada} se:
+ou é $($ seguido de uma \textit{string} bem balanceada seguida de $)$;
+ou é a concatenação de duas \textit{strings} bem balanceadas;
+ou é vazia (formalmente, é uma \textit{string} gerada pela gramática $S \rightarrow (S) | SS | \varepsilon$).
+
+É dada uma \textit{string} inicial $s$ com $N$ parênteses. Processe $Q$ operações, onde cada operação pode ser:
+\begin{itemize}
+    \item $1$ $l$ $r$: inverta todos os parênteses no intervalo
+    $[l..r]$; isto é,
+    para todo $l \leq i \leq r$, troque $s[i]$ pelo inverso de $s[i]$. O
+    \textit{inverso} de $)$ é $($, enquanto o inverso de $($ é $)$;
+    \item $2$ $l$ $r$: determine se a \textit{substring} $s[l..r]$ está bem balanceada.
+\end{itemize}
+
+%- endblock
+
+%- block input
+A primeira linha contém dois inteiros $N$ e $Q$
+($1 \leq N, Q \leq \VAR{vars.N.max | sci}$), o tamanho da \textit{string} e o
+número de operações.
+A segunda linha contém a \textit{string} inicial com $N$ parênteses.
+As próximas $Q$ linhas descrevem uma operação cada, na forma
+$t$ $l$ $r$ onde $t=1$ ou $t=2$, e $1 \leq l \leq r \leq N$.
+
+%- endblock
+
+%- block output
+Para cada operação com $t=2$, imprima uma linha com \texttt{sim} se a \textit{substring}
+$s[l..r]$ está bem balanceada, ou \texttt{nao} caso contrário.
+%- endblock
+
+
+%- block notes
+Considere o primeiro exemplo dado.
+Na primeira operação, a resposta é \texttt{sim} porque
+$s[6..9] = $\texttt{()()} está bem balanceada. Na segunda operação, a resposta é
+\texttt{nao} porque $s[1..10]$ = \texttt{()())()())} não está bem balanceada.
+
+Após a terceira operação (inverte $s[4..6]$), a \textit{string} se torna
+\texttt{()((())())}. A resposta da quarta operação é \texttt{sim} porque agora
+$s[1..10]$= \texttt{()((())())} está bem balanceada.
+
+%- endblock
+
+%- block editorial
+This is the editorial.
+%- endblock
