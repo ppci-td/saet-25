@@ -30,7 +30,6 @@ Para cada operação com $t=2$, imprima uma linha com \texttt{sim} se a \textit{
 $s[l..r]$ está bem balanceada, ou \texttt{nao} caso contrário.
 %- endblock
 
-
 %- block notes
 Considere o primeiro exemplo dado.
 Na primeira operação, a resposta é \texttt{sim} porque
@@ -44,5 +43,54 @@ $s[1..10]$= \texttt{()((())())} está bem balanceada.
 %- endblock
 
 %- block editorial
-This is the editorial.
+É bastante conhecido o algoritmo de verificação que usa uma pilha como estrutura auxiliar ou,
+neste caso em que há apenas um tipo de parênteses, um contador com o tamanho da
+pilha: incremente o contador ao encontrar $($ e decremente o contador ao
+encontrar $)$. Para ser bem balanceada, o contador deve terminar em 0 (zero) e
+nunca pode ter assumido algum valor negativo (menor que zero) durante o
+algoritmo.
+
+Esta ideia é equivalente a considerar $($ como +1 e $)$ como -1, e, dado um
+intervalo, verificar se a
+soma de todos os seus valores é 0 e também se não existe nenhum
+prefixo do intervalo cuja soma é
+negativa. O gráfico abaixo exemplifica a soma dos prefixos para
+\texttt{()(())}, que é bem balanceada; note que termina em 0 e nunca fica abaixo
+de 0 no gráfico.
+
+\begin{center}
+    \includegraphics[scale=1.9]{graficocerto.png}
+\end{center}
+
+Apenas utilizar esse algoritmo a cada operação do
+tipo 2 faria a solução ter uma complexidade de $O(Q \times N)$, que é muito
+lento para os limites deste problema. Precisamos de uma estrutura de dados
+auxiliar que, dado um intervalo $[l..r]$, permita determinar a soma dos valores
+no intervalo, e também o valor da menor soma de um prefixo do intervalo (ambos
+devem ser iguais a 0 para a \textit{substring} ser balanceada). Com uma
+\textbf{Árvore de Segmentos}, podemos determinar ambos os valores em $O(\lg N)$,
+    o que é rápido o bastante.
+
+Nos resta saber como atualizar a árvore a cada operação do
+tipo 1. Vamos notar o que acontece com as somas dos prefixos do intervalo quando
+ele é invertido; os gráficos abaixo exemplificam a soma dos prefixos para
+\texttt{(()))((} e seu inverso \texttt{))((())}, que não são bem balanceados:
+
+\begin{center}
+    \includegraphics[scale=1.6]{grafico1.png}$ $
+    \includegraphics[scale=1.6]{grafico2.png}
+\end{center}
+
+Note que o gráfico apenas se ``espelha verticalmente'', de forma que: a soma do intervalo tem seu sinal invertido; o novo valor mínimo do
+intervalo passa a ser o antigo valor máximo do intervalo, com sinal invertido; e
+o novo valor máximo do intervalo passa a ser o o antigo valor mínimo, também com
+sinal invertido. Assim, é possível processar cada operação em $O(\lg N)$ com a técnica de
+\textbf{Lazy Propagation}, mantendo em
+cada nodo da árvore a soma, o menor valor e o maior valor dos prefixos do
+segmento, e os atualizando conforme as propriedades de ``espelhamento'' citadas.
+
+Uma referência para a Árvore de Segmentos e Lazy Propagation é
+\url{https://cp-algorithms.com/data_structures/segment_tree.html}.
+
+Complexidade total: $O(N + Q\lg N)$
 %- endblock
