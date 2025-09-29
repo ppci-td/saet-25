@@ -48,5 +48,9 @@ problems:
   path: senha
 - short_name: F
   path: formacao
+- short_name: I
+  path: itsover
+- short_name: J
+  path: jogo
 - short_name: N
   path: pizza
