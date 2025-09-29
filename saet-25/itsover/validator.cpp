@@ -14,11 +14,11 @@ int main(int argc, char* argv[]) {
         inf.readEoln();
         
         for (int j = 0; j < M; j++) {
-            if(j == M-1) inf.readInt(1, 100000, "A[" + vtos(i+1) + "][" + vtos(j+1) + "]");
-            else{
-              inf.readInt(1, 100000, "A[" + vtos(i+1) + "][" + vtos(j+1) + "]");
-              inf.readSpace();
-            }
+                if(j == M-1) inf.readInt(1, 100000, "A");
+                else{
+                    inf.readInt(1, 100000, "A");
+                    inf.readSpace();
+                }
         }
 
         inf.readEoln();
