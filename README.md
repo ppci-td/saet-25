@@ -21,9 +21,9 @@ Prova da SAET 2025 no estilo rbx
       
 
 > Dificeis
-* [ ] `Acertou os Parenteses`
+* [ ] `(A) Acertou os Parenteses`
       
-* [ ] `Disco de Senha`
+* [ ] `(D) Disco de Senha`
 
-* [ ] `Noite de Pizaa`
+* [ ] `(N) Noite de Pizaa`
   
