@@ -8,7 +8,7 @@
 
 std::optional<std::string> getStringVar(std::string name) {
     if (name == "author") {
-    return "John Doe";
+    return "Ricardo Oliveira";
   }
 
   return std::nullopt;
