@@ -21,7 +21,7 @@ using namespace std;
 #define srep(i,j,n) for (ll i=j; i<(n); i--)
 #define bazinga ios::sync_with_stdio(false);cin.tie(nullptr);
 
-const ll LIM = 1e6;
+const ll LIM = 1e9;
 vb primo(LIM+1, true);
  
 void crivo(){

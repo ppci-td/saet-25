@@ -31,10 +31,10 @@ solutions:
 - path: sols/fail-*.*
   outcome: INCORRECT
 statements:
-- name: statement-en
+- name: statement-pt
   path: statement/statement.rbx.tex     # Open this file to edit your statement.
   type: rbxTeX
-  language: en
+  language: pt
   assets:   # Define assets for the statement.
   - statement/icpc.sty
   - statement/*.png

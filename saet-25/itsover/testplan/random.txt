@@ -1,2 +1,6 @@
 gens/gen 123456
 gens/gen 12345678
+gens/maior 1234567
+gens/maior 31415
+gens/menor 123456
+gens/menor 3123213
