@@ -3,7 +3,7 @@ name: pizza
 timeLimit: 1000 # ms
 memoryLimit: 256 # MiB
 titles:
-  pt: Noite da Pizza
+  pt: Hora da Pizza
 checker: {path: wcmp.cpp}   # Download others from testlib with `rbx download checker`
 validator: {path: validator.cpp}
 testcases:
