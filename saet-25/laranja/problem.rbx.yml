@@ -1,9 +1,9 @@
 # yaml-language-server: $schema=https://rsalesc.github.io/rbx/schemas/Package.json
-name: jogo
+name: laranja
 timeLimit: 1000 # ms
 memoryLimit: 256 # MiB
 titles:
-  pt: Jogo
+  en: New problem
 checker: {path: wcmp.cpp}   # Download others from testlib with `rbx download checker`
 validator: {path: validator.cpp}
 testcases:
@@ -34,7 +34,7 @@ statements:
 - name: statement-en
   path: statement/statement.rbx.tex     # Open this file to edit your statement.
   type: rbxTeX
-  language: pt
+  language: en
   assets:   # Define assets for the statement.
   - statement/icpc.sty
   - statement/*.png
@@ -65,17 +65,8 @@ unitTests:
 # and in the statement.
 vars:
   # Author name to be displayed in the editorial.
-  author: Henrique Farias
+  author: John Doe
   # Constraints of the problem.
   N:
-    min: 3
-    max: 100000
-  D:
-    min: 1
-    max: 30
-  M:
-    min: 1
-    max: 12
-  A:
     min: 1
     max: 1000000000
