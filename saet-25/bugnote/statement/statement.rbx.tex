@@ -1,0 +1,46 @@
+%- block legend
+
+Ricardo Yagami é um genial professor universitário de algoritmos e estruturas de dados, porém ele está entediado do jeito que anda o mundo.  
+Os dias se passam e as mesmas notícias: alunos usando IA para fazer trabalhos de algoritmos, agradecendo ao ChatGPT ao invés de Alan Turing — algo realmente deplorável.
+
+Porém, a vida de Ricardo mudou em certo dia, quando ele estava em sua sala e, de repente, viu um caderno preto caindo do céu pela janela.  
+
+Como já estava entediado, foi até o caderno para ver do que se tratava e começou a ler:
+
+\begin{center}
+\textbf{BugNote (Caderno do Bug)}\\
+\end{center}
+
+\begin{quote}
+Modo de usar:
+\begin{itemize}
+  \item A pessoa cujo primeiro nome for escrito neste caderno terá seu código bugado.
+  \item Após escrever o primeiro nome da pessoa, deve-se especificar a linha exata do código dela onde o bug ocorrerá.
+  \item O caderno não surtirá efeito se o nome da pessoa for escrito errado.
+  \item O caderno não surtirá efeito se a linha do código escrita nele exceder o total de linhas no código real.
+  \item Uma pessoa cuja a regra anterior vier a ocorrer poderá ter seu nome escrito novamente e ainda ter efeito, porém se o número de tentativas erradas for maior ou igual a $3$, a pessoa passa a ser imune para sempre aos efeitos do BugNote.
+\end{itemize}
+\end{quote}
+
+Após testar o caderno em seu próprio código, Ricardo confirmou sua veracidade e decidiu bolar um plano: punir todos os alunos que usam IA para fazer código ao invés de aprender — e se tornar o Sênior do novo mundo!
+
+Dado o número de alunos e o número de nomes que Ricardo escreveu no BugNote, determine quais alunos foram punidos.
+%- endblock
+
+%- block input
+ primeira linha contém dois inteiros $N$ e $Q$ ($1 \leq N, Q \leq 2000$), representando respectivamente o número de alunos na turma e o número de nomes que Ricardo escreveu no BugNote.
+
+As próximas $N$ linhas contêm uma string $s_i$ (o nome do aluno, único) e um inteiro $l_i$ ($1 \leq l_i \leq 10^5$), representando o número de linhas no código daquele aluno.
+
+Em seguida, as próximas $Q$ linhas contêm uma string $t_i$ e um inteiro $x_i$, representando o nome e a linha do código que Ricardo escreveu no BugNote.
+%- endblock
+
+%- block output
+A saída deve conter um inteiro $K$ representando o número de alunos punidos seguido de $K$ linhas com os nomes desses alunos.
+
+Caso nenhum aluno tenha sido punido, imprima \texttt{-1}.
+%- endblock
+
+%- block editorial
+This is the editorial.
+%- endblock
