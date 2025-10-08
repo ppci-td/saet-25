@@ -67,9 +67,15 @@ vars:
   # Author name to be displayed in the editorial.
   author: Henrique Farias
   # Constraints of the problem.
- N:
+N:
   min: 1
-  max: 2000  
+  max: 2000
 Q:
   min: 1
-  max: 2000        
+  max: 2000
+linhas:
+  min: 1
+  max: 100000
+linha_bugnote:
+  min: 1
+  max: 120000
