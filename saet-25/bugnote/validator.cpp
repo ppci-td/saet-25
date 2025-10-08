@@ -1,5 +1,6 @@
 #include "rbx.h"
 #include "testlib.h"
+#include "assert.h"
 
 using namespace std;
 
@@ -11,8 +12,11 @@ int main(int argc, char *argv[]) {
     int Q = inf.readInt(1, 2000, "Q");
     inf.readEoln();
 
+    set<string> unicos;
     for (int i = 0; i < N; i++) {
         string S = inf.readToken();
+        assert(unicos.find(S) == unicos.end());
+        unicos.insert(S);
         inf.readSpace();
         int linhas = inf.readInt(1, 100000, "linhas");
         inf.readEoln();

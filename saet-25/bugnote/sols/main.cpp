@@ -22,23 +22,25 @@ using namespace std;
 #define bazinga ios::sync_with_stdio(false);cin.tie(nullptr);
 
 void solve(){
-    ll n, q, ans = 0; cin >> n >> q; vs v(n); vll a(n); vs b; vll cnt(n,0);
+    ll n, q, ans = 0; cin >> n >> q; vs v(n); vll a(n); vll cnt(n,0);
+    set<ll> b; // indices dos punidos
     rep(i,0,n) cin >> v[i] >> a[i];
     rep(i,0,q){
       string s; ll m; cin >> s >> m;
       rep(j,0,n) {
         if(s == v[j] && m <= a[j] && cnt[j] < 3){
-          ans++;
-          b.pb(s);
+          b.insert(j);
+      }
         if(s == v[j] && m > a[j]) cnt[j]++;
         //cout << cnt[j] << endl;
-      }
     }  
   }
+  ans = b.size();
   if(ans == 0) cout << -1 << endl;
   else{
     cout << ans << endl;
-    rep(i,0,ans) cout << b[i] << endl;
+    for (auto i : b)
+        cout << v[i] << endl;
   }
 }
 int main(){bazinga; solve(); return 0;}
