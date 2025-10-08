@@ -4,7 +4,7 @@ Toda semana Betinha vai na loja de arrays e compra $N$ arrays para adicionar na 
 
 Porém, Betinha é um colecionador muito \textit{RedPill}, portanto ele só coloca em sua coleção um array se ele for um array \textit{Banger}.  
 
-Um array é considerado um array \textit{Banger} se a soma de todos os números nas posições primos do array também for um número primo.  
+Um array é considerado um array \textit{Banger} se a soma de todos os números nas posições primas do array também for um número primo.  
 
 Betinha acha totalmente \textit{Brutal} ter que verificar se os arrays que ele compra são \textit{Bangers} ou não, então ele compra todos sem mais nem menos.  
 Mas às vezes ele pode ser \textit{Moggado} por essa decisão: isso acontece quando ele acaba comprando um conjunto de arrays que não contém nenhum \textit{Banger}, de forma que sobra nada para Betinha colocar em sua coleção naquela semana.  
@@ -19,22 +19,25 @@ Em seguida, para cada um dos $N$ arrays:
 
 A primeira linha contém um inteiro $M$ ($1 \leq M \leq 10^3$) , o tamanho do array.  
 
-A linha seguinte contém $M$ inteiros $A$ ($1 \leq A \leq 10^5$), os elementos do array.  
+A linha seguinte contém $M$ inteiros $A$ ($1 \leq A \leq 10^5$), os elementos do array. Considere que o array é 1-indexado.
 %- endblock
 
 %- block output
 A saída deve ser na primeira linha, um inteiro $B$, a quantidade de arrays \textit{Bangers} que Betinha conseguiu naquela semana.  
 
-Na linha seguinte, $B$ inteiros representando as somas correspondentes de cada array \textit{Banger}.  
+Na linha seguinte, $B$ inteiros representando as somas correspondentes de cada array \textit{Banger}, na ordem dada na entrada.
 
 Caso Betinha tennha sido \textit{Moggado}, ou seja, caso $B = 0$, a saída deve ser a seguinte frase em letras maiúsculas: ITS OVER SOBROU NADA PRO BETINHA
 %- endblock
 
 %- block notes
-Na primeira semana do primeiro exemplo Betinha tem na primeira semana nas posições primos 2, 3 e 5 os números 9, 4 e 4 respectivamente, o que dão soma 17, que é um número primo, logo sendo um array \textit{Banger}.
+Na semana do primeiro exemplo Betinha tem no primeiro array, nas posições primas 2, 3 e 5, os números 9, 4 e 4 respectivamente, o que dão soma 17, que é um número primo, logo sendo um array \textit{Banger}.
 %- endblock
 
 %- block editorial
-Para resolver este problema uma abordagem seria pré-computar todos os número primos menores ou iguais que $10^5$ usando o Crivo de Erasthotones, com todos os primos já pré-computados podemos iterar por cada elemento do array guardando a soma daqueles nas posições primos numa váriavel e depois usar o crivo novamente para verificar se essa soma é primo também.
-Complexidade: O(N * log log N + M) 
+Para resolver este problema uma abordagem seria pré-computar todos os número primos menores ou iguais que $2 \times 10^7$ usando o Crivo de Erasthotones. Com todos os primos já pré-computados podemos iterar por cada elemento do array guardando a soma daqueles nas posições primos numa váriavel e depois usar o crivo novamente para verificar se essa soma é primo também.
+
+O valor $2 \times 10^7$ é suficiente porque existem menos de $200$ primos até $1000$, e portanto a soma dos valores nas posições primas não passa de $200 \times 10^5$.
+
+Complexidade: $O(T \times log log T + M)$ sendo $T < 2 \times 10^7$.
 %- endblock
