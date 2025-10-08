@@ -22,12 +22,24 @@ using namespace std;
 #define bazinga ios::sync_with_stdio(false);cin.tie(nullptr);
 
 void solve(){
-    ll n, c, l = 0; cin >> n >> c;
+    ll n, l = 0; cin >> n; vll f(13,1);
+    rep(i,1,13) f[i] = f[i-1]*i;
     rep(i,0,n){
-      ll cur, comeu; cin >> cur >> comeu;
-      l += cur;
-      l -= comeu;
-    } 
-
+      ll g, c, ans = 0; cin >> g >> c;
+      l += (g-c);
+      if(l > 12){
+        cout << -1 << endl;
+        continue;
+      }
+      rep(j,0,5){
+        rep(k,0,5){
+          ll cur = l-k-j;
+          if(0 <= cur && cur <= 4){
+            ans += f[l]/(f[j]*f[k]*f[cur]);
+          }
+        }
+      }
+      cout << ans << endl;
+    }
 }
 int main(){bazinga; solve(); return 0;}

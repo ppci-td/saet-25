@@ -5,14 +5,18 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
   registerValidation(argc, argv);
-  prepareOpts(argc, argv);
 
-  int MIN_N = getVar<int>("N.min"); // Read from package vars.
-  int MAX_N = getVar<int>("N.max");
-
-  inf.readInt(MIN_N, MAX_N, "A");
-  inf.readSpace();
-  inf.readInt(MIN_N, MAX_N, "B");
+  int N = inf.readInt(1, 10000, "N");
   inf.readEoln();
+
+  for(int i = 0; i < N; i++){
+
+    int G = inf.readInt(0, 100, "G");
+    inf.readSpace();
+    
+    int C = inf.readInt(0, 100, "C");
+    inf.readEoln();
+    
+  }
   inf.readEof();
 }

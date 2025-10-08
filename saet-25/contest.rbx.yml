@@ -42,6 +42,8 @@ vars:
 problems:
 - short_name: A
   path: parenteses
+- short_name: B
+  path: bugnote
 - short_name: C
   path: van
 - short_name: D

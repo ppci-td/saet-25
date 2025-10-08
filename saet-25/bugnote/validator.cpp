@@ -12,14 +12,14 @@ int main(int argc, char *argv[]) {
     inf.readEoln();
 
     for (int i = 0; i < N; i++) {
-        string S = inf.readToken("^[A-Z][a-z]{2,15}$", "nome");
+        string S = inf.readToken();
         inf.readSpace();
         int linhas = inf.readInt(1, 100000, "linhas");
         inf.readEoln();
     }
 
     for (int i = 0; i < Q; i++) {
-        string T = inf.readToken("^[A-Z][a-z]{2,15}$", "nome_bugnote");
+        string T = inf.readToken();
         inf.readSpace();
         int linha = inf.readInt(1, 120000, "linha_bugnote");
         inf.readEoln();

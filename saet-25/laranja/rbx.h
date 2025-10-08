@@ -8,14 +8,26 @@
 
 std::optional<std::string> getStringVar(std::string name) {
     if (name == "author") {
-    return "John Doe";
+    return "Henrique Farias";
   }
 
   return std::nullopt;
 }
 
 std::optional<int64_t> getIntVar(std::string name) {
-    if (name == "N.max") {
+    if (name == "C.max") {
+    return static_cast<int64_t>(100);
+  }
+  if (name == "C.min") {
+    return static_cast<int64_t>(0);
+  }
+  if (name == "G.max") {
+    return static_cast<int64_t>(100);
+  }
+  if (name == "G.min") {
+    return static_cast<int64_t>(0);
+  }
+  if (name == "N.max") {
     return static_cast<int64_t>(1000000000);
   }
   if (name == "N.min") {

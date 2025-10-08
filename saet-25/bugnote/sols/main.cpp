@@ -27,20 +27,18 @@ void solve(){
     rep(i,0,q){
       string s; ll m; cin >> s >> m;
       rep(j,0,n) {
-        if(s == v[i] && m <= a[i] && cnt[i] < 3){
+        if(s == v[j] && m <= a[j] && cnt[j] < 3){
           ans++;
           b.pb(s);
-        if(s == v[i] && m > a[i]) cnt[i]++;
+        if(s == v[j] && m > a[j]) cnt[j]++;
+        //cout << cnt[j] << endl;
       }
     }  
   }
   if(ans == 0) cout << -1 << endl;
   else{
     cout << ans << endl;
-    rep(i,0,ans){
-      if(i == b.size()-1) cout << b[i] << endl;
-      else cout << b[i] << " ";
-    }
+    rep(i,0,ans) cout << b[i] << endl;
   }
 }
 int main(){bazinga; solve(); return 0;}

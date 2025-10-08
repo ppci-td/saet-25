@@ -1,17 +1,24 @@
 %- block legend
-Given two integers $A$ and $B$, determine the value of $A + B$.
+Hicard adora laranjas, tanto que todo dia no RU (Restaurante Universitário) ele sempre pega uma laranja de sobremesa e leva para casa para poder saciar-se mais tarde.  
+Porém, uma laranja por dia não é o bastante para ele. Por isso, seus amigos da faculdade sempre pegam a laranja a que têm direito e doam para que Hicard possa levar mais de uma laranja para casa.
+
+Além de ser um grande fã de laranjas, Hicard também é apaixonado por análise combinatória, após cada dia, ele ganha $G$ novas laranjas e come $C$ laranjas.  
+Ele gostaria de saber de quantas maneiras pode rearranjar, ao final de cada dia, as laranjas em sua fruteira, que possui exatamente $3$ gavetas, cada uma podendo conter até $4$ laranjas.
 %- endblock
 
 %- block input
-The input is a single line containing two integers $A$ and $B$ ($\VAR{vars.N.max} \leq A, B \leq \VAR{vars.N.max | sci}$).
+A primeira linha contém um inteiro $N$ ($1 \le N \le 10^4$), o número de dias que Hicard pegou ou comeu laranjas.
+
+As próximas $N$ linhas contêm dois inteiros $G$ e $C$ ($0 \le G, C \le 100$), representando o número de laranjas que Hicard ganhou e comeu em cada dia, respectivamente.
+Considere que Hicard tenha inicialmente $0$ laranjas.
 %- endblock
 
 %- block output
-The output must contain only one integer, the sum of $A$ and $B$.
-%- endblock
 
-%- block notes
-No notes.
+A saída deve conter $N$ linhas.  
+Em cada linha, imprima o número de maneiras diferentes que Hicard pode organizar sua fruteira ao final do respectivo dia.
+Se houver mais laranjas do que espaço na fruteira em determinado dia, isto é, se Hicard ter mais que $12$ laranjas no final de um dia, imprima $-1$ para aquele dia.
+É garantido que que o número de laranjas nunca será negativo e que a ordem das laranjas dentro das fruteiras é irrelevante.
 %- endblock
 
 %- block editorial
