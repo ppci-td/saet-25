@@ -2,16 +2,26 @@
 
 using namespace std;
 
+typedef pair<int,int> ii;
+typedef pair<int, ii > i3;
+
 int main(int argc, char *argv[]) {
     registerGen(argc, argv, 1);
 
     int N = rnd.next(3, 100000);
     cout << N << endl;
 
+    set<i3> S;
     for(int i = 0; i < N; i++){
-        int D = rnd.next(1,30);
-        int M = rnd.next(1,12);
-        int A = rnd.next(1,1000000000);
-        cout << D << " " << M << " " << A << endl;       
+        int D,M,A;
+        do {
+            D = rnd.next(1,30);
+            M = rnd.next(1,12);
+            A = rnd.next(1,1000000000);
+        } while (S.count(i3(A,ii(M,D))));
+        S.insert(i3(A,ii(M,D)));
     }
+    // imprimir em ordem cronologica
+    for (auto w : S)
+        cout << w.second.second << " " << w.second.first << " " << w.first << endl;       
 }
