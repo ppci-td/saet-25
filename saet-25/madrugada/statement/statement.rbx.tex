@@ -1,0 +1,31 @@
+%- block legend
+Henrique ``Gubi'' é um garoto que adora Maratonas de Programação! Certo noite, depois de uma longa e divertida Maratona, Gubi e seus amigos (que também são maratonistas) tiveram uma ideia: passar toda a madrugada acordados na praia, curtindo a areia, o mar e o luar.  Gubi topou na hora! Afinal, ele já está acostumado a virar as noites acordado, e agora fará isso com seus amigos em um lugar \textit{good vibes}.
+
+Gubi e seus amigos decidiram levar para a praia todos os $B$ balões que conquistaram na Maratona daquele dia. Em um determinado momento da noite, entretanto, uma forte ventania levou $V$ desses balões embora.
+
+No final da noite (já ao amanhecer), Gubi e seus amigos resolveram dividir \textit{todos} os balões que sobraram entre as $N$ pessoas do grupo, de forma que todas as pessoas ficassem com a mesma quantidade de balões.
+
+Ajude Gubi a determinar se é possível dividir todos os balões que sobraram igualmente entre as pessoas do grupo e, se sim, com quantos balões cada pessoa vai ficar.
+
+%- endblock
+
+%- block input
+A entrada contém três inteiros $N$, $B$ e $V$
+($1 \leq N \leq \VAR{vars.N.max | sci}$, $1 \leq B \leq \VAR{vars.B.max}$, $0 \leq V \leq B$)
+indicando o número de pessoas no grupo, o número total de balões inicialmente na
+praia e o número de balões levados pelo vento, respectivamente.
+%- endblock
+
+%- block output
+Imprima uma linha com o número de balões com que cada pessoa irá ficar. Se não
+for possível fazer a divisão, imprima \texttt{-1}.
+%- endblock
+
+%- block editorial
+Sobraram $B-V$ balões após a ventania. Assim, verifique (com \texttt{if}) se
+$B-V$ é divisível por $N$, testando se o resto da divisão é igual a 0 (isto é,
+        se $(B-V) \% N = 0$). Se for, imprima $\displaystyle\frac{B-V}{N}$. Caso contrário,
+        imprima $-1$.
+
+Complexidade: $O(1)$
+%- endblock
