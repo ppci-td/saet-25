@@ -56,5 +56,7 @@ problems:
   path: jogo
 - short_name: H
   path: pizza
+- short_name: K
+  path: kurt
 - short_name: L
   path: laranja
