@@ -50,12 +50,12 @@ problems:
   path: senha
 - short_name: F
   path: formacao
+- short_name: H
+  path: pizza
 - short_name: I
   path: itsover
 - short_name: J
   path: jogo
-- short_name: H
-  path: pizza
 - short_name: K
   path: kurt
 - short_name: L
