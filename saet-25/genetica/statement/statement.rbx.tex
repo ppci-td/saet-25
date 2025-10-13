@@ -1,0 +1,43 @@
+%- block legend
+Eduardo é um grande fã de jogos eletrônicos de automação. Recentemente, ele descobriu um novo jogo chamado \textit{Genectorio}. Nesse jogo, o jogador recebe um lado de um filamento de DNA com $N$ nucleotídeos, que podem ser representados pelas letras A, C, G e T.
+
+O objetivo do jogo é construir a sequência complementar do DNA, isto é, para cada nucleotídeo:
+\begin{itemize}
+  \item A deve ser pareado com T;
+  \item T deve ser pareado com A;
+  \item C deve ser pareado com G;
+  \item G deve ser pareado com C.
+\end{itemize}
+
+Entretanto, para deixar o desafio mais interessante, o jogo possui um modo secreto onde a sequência complementar é criptografada utilizando uma variação da \textit{Cifra de César}. Nesse modo, o deslocamento de cada nucleotídeo é determinado por operações de \texttt{XOR}.
+
+Mais precisamente:
+\begin{itemize}
+  \item Seja $X$ um número inteiro inicial dado na entrada.
+  \item Para o primeiro nucleotídeo $N_1$, o número de letras a serem “puladas” é $(N_1 \oplus X)$.
+  \item Para o segundo nucleotídeo $N_2$, o deslocamento é calculado como $(N_1 \oplus X \oplus N_2)$.
+  \item O processo continua seguindo essa lógica cumulativa até o último nucleotídeo.
+\end{itemize}
+
+Após aplicar todos os deslocamentos e substituições, o jogador deve imprimir a sequência final criptografada.
+
+\textbf{Observação:} o operador $\oplus$ representa o \textit{XOR} bit a bit entre inteiros, e as letras \t{A}, \t{C}, \t{G} e \t{T} devem ser convertidas em índices inteiros para a operação (por exemplo, \t{A}=0, \t{C}=1, \t{G}=2, \t{T}=3).
+%- endblock
+
+%- block input
+A primeira linha contém dois inteiros $N$ e $X$ ($1 \le N \le 10^5$, $0 \le X < 256$).
+
+A segunda linha contém uma \textbf{string} $S$ de tamanho $N$, representando a sequência de nucleotídeos.
+%- endblock
+
+%- block output
+Imprima uma única linha contendo a \textbf{string criptografada} resultante após aplicar todas as operações descritas.
+%- endblock
+
+%- block notes
+No notes.
+%- endblock
+
+%- block editorial
+This is the editorial.
+%- endblock
