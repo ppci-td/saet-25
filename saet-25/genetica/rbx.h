@@ -22,7 +22,7 @@ std::optional<int64_t> getIntVar(std::string name) {
     return static_cast<int64_t>(1);
   }
   if (name == "X.max") {
-    return static_cast<int64_t>(256);
+    return static_cast<int64_t>(100000);
   }
   if (name == "X.min") {
     return static_cast<int64_t>(0);

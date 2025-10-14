@@ -2,3 +2,10 @@ gens/gen 123456
 gens/gen 12345678
 gens/gen 138923
 gens/gen 3913
+gens/gen 20984
+gens/gen 2345342
+gens/gen 6371234
+gens/gen 2476
+gens/gen 3245
+gens/gen 789
+gens/gen 234
