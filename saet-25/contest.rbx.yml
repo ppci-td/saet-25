@@ -38,7 +38,7 @@ statements:
   joiner:
 vars:
   year: 2025
-  date: '2025-06-21'
+  date: '2025-10-17'
 problems:
 - short_name: A
   path: parenteses

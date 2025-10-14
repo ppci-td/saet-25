@@ -1,2 +1,12 @@
 gens/gen 123456
 gens/gen 12345678
+gens/arvoresemplaca 43534
+gens/arvoresemplaca 2342
+gens/arvoresemplaca 4367983
+gens/conexosemplaca 23424
+gens/conexosemplaca 5867645
+gens/conexosemplaca 7864
+gens/conexorand 9012
+gens/conexorand 457
+gens/conexorand 45967
+gens/conexorand 1425
