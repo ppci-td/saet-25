@@ -69,19 +69,19 @@ vars:
   # Constraints of the problem.
   N:
     min: 2
-    max: 100000
+    max: 1000
   M:
     min: 1
-    max: 200000
+    max: 2000
   Q:
     min: 1
-    max: 10000
+    max: 1000
   X:
     min: 1
-    max: 100000
+    max: 1000
   Y:
     min: 1
-    max: 100000
+    max: 1000
   D:
     min: 1
     max: 1000000000
@@ -90,4 +90,4 @@ vars:
     max: 10
   A:
     min: 1
-    max: 100000
+    max: 1000

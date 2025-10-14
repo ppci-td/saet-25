@@ -45,11 +45,15 @@ problems:
 - short_name: B
   path: bugnote
 - short_name: C
-  path: van
+  path: cabecada
 - short_name: D
   path: senha
+- short_name: E
+  path: van
 - short_name: F
   path: formacao
+- short_name: G
+  path: genetica
 - short_name: H
   path: pizza
 - short_name: I

@@ -27,7 +27,7 @@ void solve(){
   vector<vector<pll>> adj(n+1);
     rep(i,0,m){
       ll x, y, d; ld h; cin >> x >> y >> d >> h;
-      if(h >= 2.275){
+      if(h >= 2.275 || h == 0){
         adj[x].push_back({y, d});
         adj[y].push_back({x, d});
       }
@@ -64,8 +64,10 @@ void solve(){
             }
         }
         if(dist[aux] == INF) cout << -1 << endl;
-        else cout << dist[aux] << endl;
-        cur = aux;
+        else {
+            cout << dist[aux] << endl;
+            cur = aux;
+        }
     }
 }
 int main(){bazinga; solve(); return 0;}

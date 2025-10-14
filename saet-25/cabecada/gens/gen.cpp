@@ -5,9 +5,9 @@ using namespace std;
 int main(int argc, char *argv[]) {
     registerGen(argc, argv, 1);
 
-    int N = rnd.next(2, 100000);
-    int M = rnd.next(1, 200000);
-    int Q = rnd.next(1, 10000);
+    int N = rnd.next(2, 1000);
+    int M = rnd.next(1, 2000);
+    int Q = rnd.next(1, 1000);
     cout << N << " " << M << " " << Q << endl;
 
     for(int i = 0; i < M; i++){
