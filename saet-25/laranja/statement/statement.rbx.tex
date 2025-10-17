@@ -31,5 +31,15 @@ $(\{B\},\{\},\{A\})$, $(\{\},\{A\},\{B\})$ e $(\{\},\{B\},\{A\})$.
 %- endblock
 
 %- block editorial
-This is the editorial.
+Para a solução deste problema primeiro levamos em consideração que tanto as laranjas quanto as gavetas são distinguíveis, o problema equivale a contar o número de maneiras de particionar \(l\) elementos distintos em três subconjuntos ordenados \((A, B, C)\) tais que \(|A|, |B|, |C| \leq 4\) e \(|A| + |B| + |C| = l\).  
+Para cada possível par de tamanhos \((j, k)\) das duas primeiras gavetas, o tamanho da terceira gaveta é \(cur = l - j - k\). Se \(cur\) for válido (entre 0 e 4), o número de maneiras de escolher quais laranjas vão para cada gaveta é dado pelo número multinomial:
+\[
+\frac{l!}{j! \, k! \, cur!}.
+\]
+Assim, somando sobre todas as combinações válidas de \((j, k)\), obtemos o número total de arranjos possíveis. 
+
+A solução esperada pré-calcula os fatoriais de \(0!\) até \(12!\) para permitir o cálculo eficiente das combinações multinomiais. Para cada dia, ele itera sobre todos os pares de tamanhos de gavetas \((j, k)\) de 0 a 4 e soma os resultados válidos. Por fim, imprime o número total de maneiras correspondentes ou \(-1\) se houver excesso de laranjas.
+
+Complexidade total: $O(N)$
+
 %- endblock

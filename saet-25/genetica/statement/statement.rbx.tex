@@ -40,9 +40,22 @@ Imprima uma linha com a \textbf{string criptografada} resultante após aplicar t
 
 %- block notes
 No primeiro exemplo de entrada, a string complementar é \texttt{CGTACG}. O deslocamento da primeira letra é $7 \oplus 2 = 5$, e logo a primeira letra criptografada é C $\rightarrow$ G $\rightarrow$ T $\rightarrow$ A $\rightarrow$ C $\rightarrow$ G.  O deslocamento da segunda letra é $7 \oplus 2 \oplus 1 = 4$, e logo a segunda letra criptografada é G $\rightarrow$ T $\rightarrow$ A $\rightarrow$ C $\rightarrow$ G.
-
 %- endblock
 
 %- block editorial
-This is the editorial.
+A solução do problema pode ser divida em 3 etapas:
+Primeiro, é necessário compreender que cada nucleotídeo (A, C, G, T) possui um par complementar fixo: A é pareado com T, T com A, C com G e G com C. Podemos representar essas letras por números inteiros \((A=0, C=1, G=2, T=3)\) para facilitar o uso do operador \texttt{XOR}.  
+
+Em seguida, para cada posição \(i\) da string original \(S\), o deslocamento utilizado na criptografia é determinado pelo \texttt{XOR} cumulativo entre \(X\) e os valores inteiros dos nucleotídeos já processados, isto é:
+\[
+\text{deslocamento}_i = X \oplus S_1 \oplus S_2 \oplus \ldots \oplus S_i
+\]
+onde \(\oplus\) representa o operador \texttt{XOR} bit a bit.  
+
+Após calcular o deslocamento, ele é reduzido módulo 4 (pois o alfabeto tem apenas 4 letras), e o resultado indica o número de posições que devemos avançar no alfabeto circular \(\{A, C, G, T\}\) a partir da letra complementar do nucleotídeo atual. Assim, a nova letra é obtida por:
+\[
+\text{reposta} = (\text{complementar}(S_i) + \text{deslocamento}_i) \bmod 4
+\]
+
+Complexidade total: $O(N)$.
 %- endblock

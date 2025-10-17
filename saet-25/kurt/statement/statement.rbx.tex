@@ -42,5 +42,15 @@ Kurt pode apertar o botão do primeiro relógio até que o segundo fique sincron
 %- endblock
 
 %- block editorial
-teste
+
+Primeiro, observamos que cada relógio opera em um ciclo de $12$ horas, ou seja, há $12 \times 60 \times 60 = 43.200$ segundos distintos possíveis. É conveniente converter cada horário $(h_i, m_i, s_i)$ em um único valor de segundos $t_i = h_i \times 3600 + m_i \times 60 + s_i$. Assim, cada relógio pode ser representado como um valor entre $0$ e $43.199$.
+A chave para resolver o problema é perceber que, se escolhermos um relógio alvo com tempo $t_i$, podemos calcular o custo (em cliques) necessário para ajustar todos os outros relógios para que coincidam com $t_i$. Quando pressionamos os botões dos demais relógios, cada relógio que está adiantado em relação a $t_i$ precisa esperar até que o ciclo complete $43.200$ segundos, enquanto os relógios atrasados exigem uma quantidade proporcional de cliques para alcançá-lo. Assim, o custo total para alinhar todos os relógios a um tempo $t_i$ pode ser modelado em função das diferenças entre os tempos atuais e $t_i$.
+A solução esperada converte os horários para segundos e armazena em um vetor $v$. Em seguida, ordena o vetor e calcula a soma total dos tempos. Para cada relógio $v_i$, avalia-se o custo para torná-lo a referência, utilizando a fórmula:
+\[
+\text{custo} = \text{soma} - n \cdot v_i + i \cdot MX,
+\]
+onde $MX = 43.200$ representa o total de segundos em $12$ horas, e o termo $i \cdot MX$ ajusta os relógios que ultrapassariam o ciclo completo de tempo. O menor custo encontrado entre todas as possibilidades é a resposta.
+
+Complexidade total: $O(N \log N)$
+
 %- endblock

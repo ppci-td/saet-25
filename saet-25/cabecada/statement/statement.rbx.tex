@@ -32,5 +32,13 @@ Foto da placa do ocorrido do enunciado afins de evidenciar o quão estupidamente
 %- endblock
 
 %- block editorial
-This is the editorial.
+Para este problema a primeira etapa da solução consiste em construir um grafo ponderado onde cada vértice representa um destino e cada aresta representa uma rua com distância $D$ e altura da placa $H$. Apenas as arestas com $H = 0$ (sem placa) ou $H \ge 2.275$ (placa segura) são adicionadas ao grafo, pois as demais representam caminhos inseguros e devem ser completamente ignoradas.
+Em seguida, para cada par de origem e destino, calculamos a menor distância com o algoritmo de Dijkstra, já que o grafo possui pesos positivos e pode ter até $100$ vértices e $200$ arestas, o que garante eficiência dentro do limite de tempo.
+Depois de cada iteração se Henrique não consegue chegar ao destino $i$, ele deve continuar sua próxima tentativa a partir do local em que parou (ou seja, sua posição atual não muda).
+
+A cada iteração, o algoritmo de Dijkstra é executado a partir da posição atual, retornando a menor distância ou \texttt{-1} caso o vértice de destino seja inalcançável.
+
+Uma referência para o algoritmo de Dijkstra: \url{https://cp-algorithms.com/graph/dijkstra.html}
+
+Complexidade total: \(O(Q \times (M \log N))\).
 %- endblock
