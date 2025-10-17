@@ -6,11 +6,11 @@ Prova da SAET 2025 no estilo rbx
 
 > Triviais
 
-* [ ] `(C) Cabe na Van?`
+* [ ] `(E) Espaço na Van?`
      
 * [ ] `(J) Jogo`
-      
-* [ ]  `(B) BugNote`
+
+* [ ] `(M) Madrugando`
       
 > Faceis
 
@@ -19,7 +19,8 @@ Prova da SAET 2025 no estilo rbx
 * [ ] `(K) Kurt Impaciente`
 
 * [ ]  `(G) Genética de Cesar`
-      
+
+* [ ]  `(B) BugNote`      
 
 > Medianos
 * [ ] `(C) Cabeçada`
