@@ -16,7 +16,7 @@ std::optional<std::string> getStringVar(std::string name) {
 
 std::optional<int64_t> getIntVar(std::string name) {
     if (name == "A.max") {
-    return static_cast<int64_t>(100000);
+    return static_cast<int64_t>(1000);
   }
   if (name == "A.min") {
     return static_cast<int64_t>(1);
@@ -34,31 +34,31 @@ std::optional<int64_t> getIntVar(std::string name) {
     return static_cast<int64_t>(0);
   }
   if (name == "M.max") {
-    return static_cast<int64_t>(200000);
+    return static_cast<int64_t>(2000);
   }
   if (name == "M.min") {
     return static_cast<int64_t>(1);
   }
   if (name == "N.max") {
-    return static_cast<int64_t>(100000);
+    return static_cast<int64_t>(1000);
   }
   if (name == "N.min") {
     return static_cast<int64_t>(2);
   }
   if (name == "Q.max") {
-    return static_cast<int64_t>(10000);
+    return static_cast<int64_t>(1000);
   }
   if (name == "Q.min") {
     return static_cast<int64_t>(1);
   }
   if (name == "X.max") {
-    return static_cast<int64_t>(100000);
+    return static_cast<int64_t>(1000);
   }
   if (name == "X.min") {
     return static_cast<int64_t>(1);
   }
   if (name == "Y.max") {
-    return static_cast<int64_t>(100000);
+    return static_cast<int64_t>(1000);
   }
   if (name == "Y.min") {
     return static_cast<int64_t>(1);
