@@ -6,7 +6,7 @@ Prova da SAET 2025 no estilo rbx
 
 > Triviais
 
-* [ ] `(E) Espaço na Van?`
+* [ ] `(E) Espaço na Van`
      
 * [ ] `(J) Jogo`
 
@@ -16,9 +16,9 @@ Prova da SAET 2025 no estilo rbx
 
 * [ ] `(I) Its Over`
 
-* [ ] `(K) Kurt Impaciente`
+* [ ] `(K) Kurt`
 
-* [ ]  `(G) Genética de Cesar`
+* [ ]  `(G) Genectorio`
 
 * [ ]  `(B) BugNote`      
 
