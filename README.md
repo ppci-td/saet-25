@@ -16,8 +16,6 @@ Prova da SAET 2025 no estilo rbx
 
 * [ ] `(I) Its Over`
 
-* [ ] `(K) Kurt`
-
 * [ ]  `(G) Genectorio`
 
 * [ ]  `(B) BugNote`      
@@ -26,6 +24,8 @@ Prova da SAET 2025 no estilo rbx
 * [ ] `(C) Cabeçada`
 
 * [ ] `(F) Formando Dupla`
+
+* [ ] `(K) Kurt`
 
 * [ ] `(L) Laranja`      
 
